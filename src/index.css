@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+  background-color: #F7F7F7;
+}
+main {
+  width: 100%;
+  padding: 1rem 3rem;
+  position: relative;
+}
+
+.navbar {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-family: 'poppins';
+  color: #FD9800;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-tech {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.tech-logo {
+  cursor: pointer;
+  height: 30px;
+  margin-left: 10px;
+  transition: all .3s;
+}
+
+
+/*Footer*/
+.footer {
+  width: 100%;
+  color: #282c34;
+  padding: 1rem 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 1rem;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-content p{
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+}
+.footer-links a {
+  font-family: 'poppins';
+  color: #FD9800;
+  text-decoration: none;
+}
+
+.footer-links a:hover,.navbar-logo:hover {
+  color: #d18512;
+}
+
+/* Task */
+.task{
+  padding: 1rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+  border-radius: 5px;
+  background: white; /* Para una mejor visibilidad */
+  box-sizing: border-box;
+}
+
+.task .container-img{
+  height: 4rem;
+  width: 4rem;
+  background: #8AAECA;
+  padding: .5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.30);
+}
+
+.task .container-img img{
+  width: 100%;
+  height: 100%;
+}
+.task .cabecera{
+  display: flex;
+  justify-content: space-between;
+}
+.fechaa{
+  color: #43484E;
+  font-family: 'Poppins';
+  font-size: 12px;
+}
+
+.task .title{
+  margin-top: .3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #43484E;
+}
+
+.task .descripcion{
+  margin-top: .3rem;
+  color: #636567;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9rem;
+  min-height: 2rem;
+}
+
+.botones{
+  margin-top: .5rem;
+  display: flex;
+  gap: .5rem;
+}
+
+.botones button{
+  padding: .5rem .8rem;
+  border-radius: 4px;
+  border: none;
+  color: #ebeaea;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.botones button:nth-child(1){
+  background-color: #8AAECA;
+}
+
+.botones button:nth-child(1):hover{
+  background-color: #72b4e6;
+}
+
+.botones button:nth-child(2){
+  background-color: #e24848;
+}
+
+.botones button:nth-child(2):hover{
+  background-color: #eb2d2d;
+}
+
+.botones button:nth-child(3){
+  background-color: #5dd89a;
+}
+
+.botones button:nth-child(3):hover{
+  background-color: #3df197;
+}
+
+.botones button.completa
+{
+  background-color: #676a6d;
+}
+.botones button.completa:hover{
+  background-color: #525353;
+}
+/* Task Container */
+.task-container{
+  min-height: 40vh;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr); /* Por defecto, 4 columnas */
+  margin: 1rem 0 3rem;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+@media(max-width: 1200px) {
+  .task-container{
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+  }
+}
+
+@media(max-width: 900px) {
+  .task-container{
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+}
+
+@media(max-width: 600px) {
+  .task-container{
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+  }
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin: 1rem 0 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.20);
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.formulario input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario input[type="text"]:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
+  outline: none;
+}
+
+.formulario button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0066cc;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #004999;
+  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+}
+
+.formulario button:active {
+  background-color: #003366;
+}
+
